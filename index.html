@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            background-color: rgb(174, 210, 198);
+        }
+        .input-box {
+            width:50%;
+            border:1px solid black;
+            padding:12px;
+            font-size: 16px;
+            margin-top: 5px;
+
+
+        }
+        label {
+            font-weight: bold;
+            color: black;
+        }
+        form {
+            margin-top: 40px;
+        }
+        .feedback-form {
+            border:2px solid black;
+            border-radius: 15px;
+            padding:30px;
+            margin:40px auto;
+            max-width: 600px;
+            background-color: aliceblue;
+
+        }
+        button {
+            display: block;
+            background-color: yellowgreen;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <center><div class="feedback-form">
+    <form>
+        <h2>Feedback Form</h2>
+        <label>Name</label>
+        <input type="text" class="input box" placeholder="Your Name" required><br><br>
+        
+        <label>Email</label>
+        <input type="email" class="input box" placeholder="Email Address" required><br><br>
+
+        <label>Phone Number</label>
+        <input type="tel" class="input box" placeholder="Phone Number" required><br><br>
+        
+        <label>Rate your Experience</label>
+        <select id="Rate your Experience" class="input box" required>
+        <option value="0">1 star</option>
+        <option value="1">2 star</option>
+        <option value="2">3 star</option>
+        <option value="3">4 star</option>
+        <option value="4">5 star</option>
+        </select><br><br>
+      <label>Your Opinion</label><br>
+      <textarea placeholder="Write Here..." rows="7" required></textarea><br>
+      <br>
+      
+
+      <button type="submit">Submit Feedback</button>
+
+    </form>
+  </div></center>
+</body>
+</html>
