@@ -4,70 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
+
     <style>
         body {
-            background-color: rgb(174, 210, 198);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        .input-box {
-            width:50%;
-            border:1px solid black;
-            padding:12px;
-            font-size: 16px;
-            margin-top: 5px;
 
-
+        .feedback-form {
+            background: white;
+            padding: 35px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
         label {
             font-weight: bold;
-            color: black;
-        }
-        form {
-            margin-top: 40px;
-        }
-        .feedback-form {
-            border:2px solid black;
-            border-radius: 15px;
-            padding:30px;
-            margin:40px auto;
-            max-width: 600px;
-            background-color: aliceblue;
-
-        }
-        button {
             display: block;
-            background-color: yellowgreen;
-            padding: 12px;
-            border: none;
-            cursor: pointer;
+            margin-top: 12px;
+            color: #444;
         }
-        
-        
+
+        .input-box,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-box:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #6c63ff;
+            box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            background: #6c63ff;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #5548d9;
+            transform: scale(1.03);
+        }
     </style>
 </head>
 <body>
-    <h1></h1>
-    <center><div class="feedback-form">
-    <form>
-        <h2>Feedback Form</h2>
-        <label>Name</label>
-        <input type="text" class="input box" placeholder="Your Name" required><br><br>
-        
-        <label>Email</label>
-        <input type="email" class="input box" placeholder="Email Address" required><br><br>
 
-        <label>Phone Number</label>
-        <input type="tel" class="input box" placeholder="Phone Number" required><br><br>
-        
-        <label>Rate your Experience</label>
-        
-      <label>Your Opinion</label><br>
-      <textarea placeholder="Write Here..." rows="7" required></textarea><br>
-      <br>
-      
+    <div class="feedback-form">
+        <form>
+            <h2>Feedback Form</h2>
 
-      <button type="submit">Submit Feedback</button>
+            <label>Name</label>
+            <input type="text" class="input-box" placeholder="Enter your name" required>
 
-    </form>
-  </div></center>
+            <label>Email</label>
+            <input type="email" class="input-box" placeholder="Enter your email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" class="input-box" placeholder="Enter your phone number" required>
+
+            <label for="rating">Rate your Experience</label>
+            <select id="rating" class="input-box" required>
+                <option value="">Select Rating</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Poor">Poor</option>
+            </select>
+            <label>Your Opinion</label>
+            <textarea placeholder="Write your feedback here..." rows="5" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
 </body>
 </html>
