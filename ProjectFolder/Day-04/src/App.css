@@ -1,0 +1,18 @@
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.student-card {
+  width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 8px gray;
+}
+
+.student-card h2 {
+  color: darkblue;
+}
